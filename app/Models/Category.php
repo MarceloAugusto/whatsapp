@@ -23,4 +23,10 @@ class Category extends Model
             ]
         ];
     }
+
+    //belongsToMany - pertence a muitas produtos
+    public function products()
+    {
+        return $this->belongsToMany(Product::class);
+    }
 }
